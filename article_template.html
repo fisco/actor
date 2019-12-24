@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>David Fisco: Actor</title>
+    <script src="https://kit.fontawesome.com/bee9af0096.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/typography.css" />
+    <link rel="stylesheet" href="/css/bulma-panel.css" />
+    <style>
+      body.with-margin {
+        --payload-max-width: 960px;
+        --payload-min-width: 100px;
+        display: grid;
+        /* grid-template-columns: minmax(5vw, 1fr) [payload-start] minmax(20px, 840px) [payload-end] minmax(5vw, 1fr); */
+        grid-template-columns:
+          minmax(5vw, 1fr) repeat(
+            12,
+            minmax(
+              calc(var(--payload-min-width) / 12),
+              calc(var(--payload-max-width) / 12)
+            )
+          )
+          minmax(5vw, 1fr);
+        grid-template-rows: 5vh minmax(90vh, auto) 5vh;
+        grid-template-areas:
+          ". . . . . . . . . . . . . ."
+          ". payload payload payload payload payload payload payload payload payload payload payload payload ."
+          ". . . . . . . . . . . . . .";
+      }
+      body > div:nth-child(1) {
+        grid-area: payload;
+      }
+
+      article > *:nth-child(1) {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      #page-fisco {
+        display: grid;
+        /* grid-gap: 20px; */
+        grid-gap: 0;
+        grid-template-rows: repeat(6, min-content);
+        grid-template-areas:
+          "page-header"
+          "page-title"
+          "page-gutter1"
+          "page-content"
+          "page-gutter2"
+          "page-footer";
+      }
+      @media (min-width: 650px) {
+        #page-fisco {
+          grid-template-columns: 5fr 2fr;
+          column-gap: 2rem;
+          grid-template-areas:
+            "page-header  page-header"
+            "page-gutter1     page-gutter1"
+            "page-title page-title"
+            "page-content page-gutter2"
+            "page-footer      page-footer";
+        }
+        nav ul {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      /* @media (min-width: 700px) {
+        .wrapper {
+          grid-template-columns: 1fr 4fr 1fr;
+          grid-template-areas:
+            "header header  header"
+            "nav    content sidebar"
+            "nav    content ad"
+            "footer footer  footer";
+        }
+        nav ul {
+          flex-direction: column;
+        }
+      } */
+      #page-header-fisco {
+        grid-area: page-header;
+        display: grid;
+        grid-template-columns:
+          [all-start] repeat(12, [col-start] 1fr [col-end])
+          [all-end];
+        grid-template-rows: max-content;
+      }
+      .page-title-fisco {
+        grid-area: page-title;
+      }
+      .page-content-fisco {
+        grid-area: page-content;
+      }
+      .page-gutter1-fisco {
+        grid-area: page-gutter1;
+      }
+      .page-gutter2-fisco {
+        grid-area: page-gutter2;
+      }
+      .page-footer-fisco {
+        grid-area: page-footer;
+      }
+    </style>
+
+  </head>
+  <body class="with-margin">
+    <div id="page-fisco">
+      <header id="page-header-fisco"  style="border-bottom: .35rem black solid;">
+        <div
+          style="grid-row-start: 1; grid-column-start: 1; grid-column-end: 4;"
+        >
+          <img src="images/actor_logo.jpg" height="auto" width="100%" />
+        </div>
+        <div
+        style="align-self: center; grid-column-start: 5; grid-column-end: all;"
+        >
+        <script async src="https://cse.google.com/cse.js?cx=006375221608361844386:sofyltu7rvy"></script>
+        <div class="gcse-search"></div>
+        </div> 
+      </header>
+      <h1 class="page-title-fisco">Reading: <i>Account of a Visit from St. Nicholas</i>, the Original (1823) Version of <i>'Twas the Night Before Christmas</i></h1>
+      <!-- <nav
+        class="page-nav"
+        style="background-color: rgb(202, 202, 202); font-size: .8rem; padding: .35rem;"
+      >
+        <header>
+          Page Navigation
+        </header>
+        <ul style="list-style-type: none; padding: 0;">
+          <li><a href="">Introduction</a></li>
+          <li><a href="">Lorem ipsum lorem ipsum</a></li>
+          <li><a href="">Conclusions</a></li>
+        </ul>
+      </nav> -->
+      <nav class="page-gutter1-fisco"><!--
+        <div class="bulma-panel">
+        <p class="bulma-panel-heading">
+          Page Navigation
+        </p>
+        <a class="bulma-panel-block" href="">
+          Introduction
+        </a>
+        <a class="bulma-panel-block" href="">
+          Lorem ipsum lorem ipsum lorem ipsum
+        </a>
+        <a class="bulma-panel-block" href="">
+          Conclusions
+        </a> 
+      </div> -->
+      </nav>
+      <article class="page-content-fisco">
+        <p>
+          In this layout, we display the areas in source order for any screen
+          less that 500 pixels wide. We go to a two column layout, and then to a
+          three column layout by redefining the grid, and the placement of items
+          on the grid.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          tristique lorem at dolor ultrices lacinia. Aliquam sit amet sagittis
+          lectus, et luctus ante. Nulla finibus quis dui id accumsan. Donec quis
+          condimentum ex. Vivamus pellentesque libero nisl. Donec lacinia sit
+          amet ante ac posuere. Nullam pellentesque, ligula vitae bibendum
+          vulputate, lectus purus ullamcorper sem, ut volutpat turpis neque at
+          est. Morbi rhoncus nisi nibh, in cursus urna sollicitudin ac. Praesent
+          eu mi vel elit accumsan consectetur. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Etiam eget
+          tempus sem. In vel leo nec augue tempor facilisis sit amet nec enim.
+          Maecenas sed tristique urna. Nulla libero tortor, vehicula nec ante
+          et, fringilla lobortis magna. Suspendisse potenti. Nam vestibulum leo
+          vel purus accumsan placerat. Vivamus ac dolor vehicula, gravida nisl
+          eget, tristique ex. Nulla condimentum ac nibh id accumsan. Suspendisse
+          interdum condimentum sollicitudin. Orci varius natoque penatibus et
+          magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat
+          volutpat. Nulla maximus arcu a metus pellentesque, in gravida ex
+          vulputate. Ut id elit quis nisi condimentum semper at in justo.
+          Curabitur tempor risus at ultrices ornare. Praesent aliquet risus
+          pharetra metus bibendum, id suscipit diam interdum. Donec nunc nibh,
+          dignissim non mauris eget, egestas iaculis justo. Pellentesque cursus
+          tempus purus quis rutrum.</p>
+           <p>
+            Donec
+            vel nisi orci. Mauris non ex quis nunc hendrerit tempor at at purus.
+            Donec a placerat magna. Sed congue tempus neque a cursus. Nam tempor
+            mollis sapien, eu dictum velit eleifend id. Mauris dictum, libero nec
+            luctus suscipit, augue lacus tincidunt mauris, eget venenatis quam
+            sapien ut orci. Donec lacus sem, scelerisque in nibh id, gravida
+            faucibus purus. Maecenas vehicula ligula eu enim porta, ac bibendum
+            velit lobortis. Proin feugiat ligula sed eros euismod accumsan.
+            Pellentesque sed dolor commodo, lobortis quam ac, hendrerit risus.
+            Cras tristique quam sed felis sagittis, congue pellentesque ligula
+            vestibulum. Ut venenatis risus vel urna ultricies pulvinar.
+            Pellentesque nulla felis, rutrum sit amet ante ut, posuere finibus
+            nunc. Donec mollis eleifend facilisis. Cras feugiat in dolor in
+            eleifend. Orci varius natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus. Proin ultrices, felis a tincidunt
+            varius, dolor ex porta lorem, at euismod tellus sapien mollis dolor.
+            Nam sit amet dui sed lorem vehicula scelerisque. Vestibulum sit amet
+            nunc placerat, scelerisque urna a, gravida nulla. Curabitur
+            consectetur, ex facilisis condimentum luctus, lacus ipsum ultricies
+            magna, sit amet convallis lacus purus ut est. Proin pellentesque
+            hendrerit lectus vel laoreet. Cras tincidunt vestibulum sodales.
+            Quisque id risus at augue viverra ultricies. Duis diam sem, congue vel
+            maximus id, mattis in augue. Duis mollis facilisis tempus. Integer eu
+            neque vitae massa egestas auctor. Curabitur congue, massa vitae
+            tincidunt vestibulum, quam tellus ultricies risus, ut porta dui justo
+            at lorem. Fusce tempor, mauris id bibendum imperdiet, ligula elit
+            efficitur dolor, nec dignissim neque justo quis eros.
+          </p> <p>Vestibulum
+          cursus sit amet felis at pellentesque. Donec quis nisi et sapien
+          faucibus vulputate a sed odio. Praesent consequat et nisi sodales
+          sagittis. Aenean et urna in urna fermentum ultrices. Integer aliquam
+          pretium arcu, at scelerisque orci congue non. Nam non nibh nec quam
+          pulvinar congue eget eget dui. Mauris consequat non elit sit amet
+          interdum. Donec posuere odio ut ligula tempus eleifend. Etiam quis sem
+          libero. Pellentesque ornare mollis quam, vitae aliquam urna maximus
+          quis. Vestibulum aliquet ultricies felis vitae vestibulum. Maecenas
+          eleifend diam quis quam feugiat sollicitudin. Aliquam gravida
+          venenatis orci quis dapibus. Sed vel volutpat erat. Suspendisse non
+          ultrices odio. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Donec luctus luctus mi, id malesuada
+          neque ullamcorper ut. Quisque ut maximus sem. Nullam a odio nulla.
+          Nunc id nunc eget lacus eleifend feugiat. Integer dui ex, pharetra ac
+          mauris pellentesque, vehicula eleifend magna. Nullam luctus purus sed
+          congue rutrum. Vivamus lobortis tellus nec finibus accumsan. Donec
+          eros ex, vehicula et ipsum at, eleifend lacinia leo. Ut placerat
+          vestibulum erat, consectetur laoreet lorem volutpat sed. In hac
+          habitasse platea dictumst. Pellentesque consectetur efficitur nisi,
+          vel ullamcorper lectus scelerisque id. Nam id nisi nec leo sagittis
+          gravida eget non lectus. Sed eget mauris aliquam, dapibus augue sit
+          amet, mollis lectus. Fusce nunc ex, vestibulum sed consequat sed,
+          gravida eu sapien. Vivamus quis ante vel arcu finibus facilisis at in
+          libero. Nunc id ullamcorper nisl, eu euismod risus. Ut eu velit
+          turpis. Donec mollis turpis eget orci imperdiet lacinia. Suspendisse
+          sagittis enim nibh, luctus pharetra augue euismod at. </p>
+        </p>
+        <p>
+          <code>
+            This is code.
+          </code>
+        </p>
+        <p class="monospace">
+          Monospace paragraph.
+        </p>
+      </article>
+      <div class="page-side">
+        <div class="bulma-panel" style="font-size: .75rem;">
+          <header class="bulma-panel-heading">Contact</header>
+          <a class="bulma-panel-block" href="mailto:actor@davidfisco.com"
+            ><span class="bulma-panel-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </span> actor@davidfisco.com</a
+          >
+          <a
+            class="bulma-panel-block"
+            href="tel:917-720-2217"
+            title="Call David Fisco"
+            ><span class="bulma-panel-icon">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+            </span> 917-720-2217</a
+          >
+        </div>
+        <div class="bulma-panel"  style="font-size: .75rem;">
+            <header class="bulma-panel-heading">Affiliations</header>
+            <div class="bulma-panel-block">
+                <div><a href="http://www.sagaftra.org">SAG&middot;AFTRA</a> member number: 10090464</div>
+              </div>
+              <div class="bulma-panel-block">
+                <div>
+                  <a href="https://www.actorsequity.org">AEA</a> eligible
+                </div>
+              </div>
+              <div class="bulma-panel-block">
+                Right-to-work state negotiable
+              </div>
+              <div class="bulma-panel-block">
+                Representation inquiries welcome
+              </div>
+              <div class="bulma-panel-block">
+                Willing to travel, have valid passport
+              </div>
+        </div>
+      </div>
+      <footer class="main-footer"><p>
+        The footer
+      </p></footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+html {
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+.monospace {
+  font-family: monospace;
+}
+aside {
+  font-size: 0.66rem;
+}

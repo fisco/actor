@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>David Fisco: Actor</title>
+    <script
+      src="https://kit.fontawesome.com/bee9af0096.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/typography.css" />
+    <link rel="stylesheet" href="/css/bulma-panel.css" />
+    <style>
+      body.with-margin {
+        --payload-max-width: 960px;
+        --payload-min-width: 100px;
+        display: grid;
+        /* grid-template-columns: minmax(5vw, 1fr) [payload-start] minmax(20px, 840px) [payload-end] minmax(5vw, 1fr); */
+        grid-template-columns:
+          minmax(5vw, 1fr) repeat(
+            12,
+            minmax(
+              calc(var(--payload-min-width) / 12),
+              calc(var(--payload-max-width) / 12)
+            )
+          )
+          minmax(5vw, 1fr);
+        grid-template-rows: 5vh minmax(90vh, auto) 5vh;
+        grid-template-areas:
+          ". . . . . . . . . . . . . ."
+          ". payload payload payload payload payload payload payload payload payload payload payload payload ."
+          ". . . . . . . . . . . . . .";
+      }
+      body > div:nth-child(1) {
+        grid-area: payload;
+      }
+
+      article > *:nth-child(1) {
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      #page-fisco {
+        display: grid;
+        /* grid-gap: 20px; */
+        grid-gap: 0;
+        grid-template-rows: repeat(6, min-content);
+        grid-template-areas:
+          "page-header"
+          "page-title"
+          "page-gutter1"
+          "page-content"
+          "page-gutter2"
+          "page-footer";
+      }
+      @media (min-width: 650px) {
+        #page-fisco {
+          grid-template-columns: 5fr 2fr;
+          column-gap: 2rem;
+          grid-template-areas:
+            "page-header  page-header"
+            "page-gutter1     page-gutter1"
+            "page-title page-title"
+            "page-content page-gutter2"
+            "page-footer      page-footer";
+        }
+        nav ul {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      /* @media (min-width: 700px) {
+        .wrapper {
+          grid-template-columns: 1fr 4fr 1fr;
+          grid-template-areas:
+            "header header  header"
+            "nav    content sidebar"
+            "nav    content ad"
+            "footer footer  footer";
+        }
+        nav ul {
+          flex-direction: column;
+        }
+      } */
+      #page-header-fisco {
+        grid-area: page-header;
+        display: grid;
+        grid-template-columns:
+          [all-start] repeat(12, [col-start] 1fr [col-end])
+          [all-end];
+        grid-template-rows: max-content;
+      }
+      .page-title-fisco {
+        grid-area: page-title;
+      }
+      .page-content-fisco {
+        grid-area: page-content;
+      }
+      .page-gutter1-fisco {
+        grid-area: page-gutter1;
+      }
+      .page-gutter2-fisco {
+        grid-area: page-gutter2;
+      }
+      .page-footer-fisco {
+        grid-area: page-footer;
+      }
+    </style>
+  </head>
+  <body class="with-margin">
+    <div id="page-fisco">
+      <header id="page-header-fisco" style="border-bottom: .35rem black solid;">
+        <div
+          style="grid-row-start: 1; grid-column-start: 1; grid-column-end: 4;"
+        >
+          <img src="images/actor_logo.jpg" height="auto" width="100%" />
+        </div>
+        <div
+          style="align-self: center; grid-column-start: 5; grid-column-end: all;"
+        >
+          <script
+            async
+            src="https://cse.google.com/cse.js?cx=006375221608361844386:sofyltu7rvy"
+          ></script>
+          <div class="gcse-search"></div>
+        </div>
+      </header>
+      <h1 class="page-title-fisco">
+        Reading: <i>Account of a Visit from St. Nicholas</i>, the Original
+        (1823) Version of <i>'Twas the Night Before Christmas</i>
+      </h1>
+      <!-- <nav
+        class="page-nav"
+        style="background-color: rgb(202, 202, 202); font-size: .8rem; padding: .35rem;"
+      >
+        <header>
+          Page Navigation
+        </header>
+        <ul style="list-style-type: none; padding: 0;">
+          <li><a href="">Introduction</a></li>
+          <li><a href="">Lorem ipsum lorem ipsum</a></li>
+          <li><a href="">Conclusions</a></li>
+        </ul>
+      </nav> -->
+      <nav class="page-gutter1-fisco">
+        <!--
+        <div class="bulma-panel">
+        <p class="bulma-panel-heading">
+          Page Navigation
+        </p>
+        <a class="bulma-panel-block" href="">
+          Introduction
+        </a>
+        <a class="bulma-panel-block" href="">
+          Lorem ipsum lorem ipsum lorem ipsum
+        </a>
+        <a class="bulma-panel-block" href="">
+          Conclusions
+        </a> 
+      </div> -->
+      </nav>
+      <article class="page-content-fisco">
+        <p>
+          This is my reading of the <i>original</i> poem known commonly today as
+          <i>'Twas the Night Before Christmas</i>. <a href="https://en.wikisource.org/wiki/Troy_Sentinel/1823/12/23/Account_of_a_Visit_from_St._Nicholas">The original text</a> has been neither
+          modernized nor bowdlerized. So, if you listen carefully, you'll hear
+          things like St. Nick refering to Donder and Blitzen by their original
+          names: Dunder and Blixem; and wishing the world a "happy", not "merry" Christmas.
+        </p>
+        <p>
+          Enjoy...and have a "Happy Christmas". 
+        </p>
+        <p>
+          <audio controls>
+            <source src="/audio/visit_st_nick.ogg" type="audio/ogg" />
+            <source src="/audio/visit_st_nick.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </p>
+        <h2>Public domain sound effect credits</h2>
+        <ul>
+          <li><a href="https://freesound.org/people/toddcircle/sounds/451639/">https://freesound.org/people/toddcircle/sounds/451639/</a></li>
+          <li><a href="https://freesound.org/people/Ryding/sounds/125968/">https://freesound.org/people/Ryding/sounds/125968/</a></li>
+          <li><a href="https://freesound.org/people/craigsmith/sounds/479691/">https://freesound.org/people/craigsmith/sounds/479691/</a></li>
+          <li><a href="https://freesound.org/people/Kane53126/sounds/257928/">https://freesound.org/people/Kane53126/sounds/257928/</a></li>
+          <li><a href="https://freesound.org/people/PrdiChlp/sounds/181889">https://freesound.org/people/PrdiChlp/sounds/181889</a></li>
+        </ul>          
+        </article>
+      <div class="page-side">
+        <div class="bulma-panel" style="font-size: .75rem;">
+          <header class="bulma-panel-heading">Contact</header>
+          <a class="bulma-panel-block" href="mailto:actor@davidfisco.com"
+            ><span class="bulma-panel-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </span>
+            actor@davidfisco.com</a
+          >
+          <a
+            class="bulma-panel-block"
+            href="tel:917-720-2217"
+            title="Call David Fisco"
+            ><span class="bulma-panel-icon">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+            </span>
+            917-720-2217</a
+          >
+        </div>
+        <div class="bulma-panel" style="font-size: .75rem;">
+          <header class="bulma-panel-heading">Affiliations</header>
+          <div class="bulma-panel-block">
+            <div>
+              <a href="http://www.sagaftra.org">SAG&middot;AFTRA</a> member
+              number: 10090464
+            </div>
+          </div>
+          <div class="bulma-panel-block">
+            <div><a href="https://www.actorsequity.org">AEA</a> eligible</div>
+          </div>
+          <div class="bulma-panel-block">
+            Right-to-work state negotiable
+          </div>
+          <div class="bulma-panel-block">
+            Representation inquiries welcome
+          </div>
+          <div class="bulma-panel-block">
+            Willing to travel, have valid passport
+          </div>
+        </div>
+      </div>
+      <footer class="main-footer">
+        <p>
+          Unless otherwise noted on the page, this material is &copy; 2019 by David Fisco.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
